@@ -63,15 +63,15 @@ public class Application extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
                 String put = textField.getText().trim();
                 if (put.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "������� ���� � �����!");
+                    JOptionPane.showMessageDialog(null, "Не указан путь!", "Ошибка", 0);
                 } else {
                     File newf = new File(put);
 
                     try {
                         newf.createNewFile();
-                        JOptionPane.showMessageDialog(null, "���� ������!");
+                        JOptionPane.showMessageDialog(null, "Файл создан!", "Информация", 1);
                     } catch (IOException e) {
-                        JOptionPane.showMessageDialog(null, "���� �� ������!");
+                        JOptionPane.showMessageDialog(null, "Файл не создан!", "Ошибка", 0);
                     }
 
                 }
@@ -85,14 +85,14 @@ public class Application extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String put = textField.getText().trim();
                 if (put.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "������� ���� � �����!");
+                    JOptionPane.showMessageDialog(null, "Не указан путь!", "Ошибка", 0);
                 } else {
                     File newf = new File(put);
                     if (newf.exists()) {
                         newf.delete();
-                        JOptionPane.showMessageDialog(null, "���� ���˨�!");
+                        JOptionPane.showMessageDialog(null, "Файл удалён!", "Информация", 1);
                     } else {
-                        JOptionPane.showMessageDialog(null, "���� �� ���˨�!");
+                        JOptionPane.showMessageDialog(null, "Файл не удалён!", "Ошибка", 0);
                     }
                 }
             }
@@ -105,7 +105,7 @@ public class Application extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String put = textField.getText().trim();
                 if (put.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "������� ���� � �����!");
+                    JOptionPane.showMessageDialog(null, "Не указан путь!", "Ошибка", 0);
                 } else {
                     File newf = new File(put);
                     if (newf.exists()) {
@@ -132,7 +132,7 @@ public class Application extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
                 String stroka = textField.getText().trim();
                 if (stroka.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "������� ���� � �����!");
+                    JOptionPane.showMessageDialog(null, "Не указан путь!", "Ошибка", 0);
                 } else {
                     File nf = new File(stroka);
                     if (nf.exists()) {
@@ -147,7 +147,7 @@ public class Application extends JFrame {
                             buf.close();
                             in.close();
                         } catch (IOException e) {
-							e.printStackTrace();
+                            e.printStackTrace();
                         }
                     } else {
                         JOptionPane.showMessageDialog(null, "���� �� ������!");
@@ -163,7 +163,7 @@ public class Application extends JFrame {
             public void actionPerformed(ActionEvent arg0) {
                 String put = textField.getText().trim();
                 if (put.isEmpty()) {
-                    JOptionPane.showMessageDialog(null, "������� ���� � �����!");
+                    JOptionPane.showMessageDialog(null, "Не указан путь!", "Ошибка", 0);
                 } else {
                     File nf = new File(put);
                     if (nf.exists()) {
@@ -175,7 +175,7 @@ public class Application extends JFrame {
                             st.close();
                             JOptionPane.showMessageDialog(null, "���������� �������� � ����!");
                         } catch (IOException e) {
-							e.printStackTrace();
+                            e.printStackTrace();
                         }
                     } else {
                         JOptionPane.showMessageDialog(null, "���� �� ������!");
