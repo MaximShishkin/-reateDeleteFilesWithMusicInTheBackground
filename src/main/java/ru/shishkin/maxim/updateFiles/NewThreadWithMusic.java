@@ -1,8 +1,9 @@
-package ru.shishkin.updateFilesWithMusicInBackground;
+package ru.shishkin.maxim.updateFiles;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
+
 import javazoom.jl.decoder.JavaLayerException;
 import javazoom.jl.player.Player;
 

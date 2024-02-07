@@ -1,4 +1,4 @@
-package ru.shishkin.updateFilesWithMusicInBackground;
+package ru.shishkin.maxim.updateFiles;
 
 import java.awt.EventQueue;
 import javax.swing.JFrame;
@@ -22,7 +22,7 @@ import java.io.OutputStreamWriter;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextArea;
 
-public class Application extends JFrame {
+public class App extends JFrame {
     private JPanel contentPane;
     private JTextField textField;
     private JTextArea textArea;
@@ -32,7 +32,7 @@ public class Application extends JFrame {
         EventQueue.invokeLater(new Runnable() {
             public void run() {
                 try {
-                    Application frame = new Application();
+                    App frame = new App();
                     frame.setVisible(true);
                 } catch (Exception e) {
                     e.printStackTrace();
@@ -41,7 +41,7 @@ public class Application extends JFrame {
         });
     }
 
-    public Application() {
+    public App() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setBounds(100, 100, 525, 249);
         contentPane = new JPanel();
